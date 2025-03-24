@@ -1,9 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Eu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles/carrosel.css">
+  <link rel="stylesheet" href="styles/index.css">
 </head>
+
 <body>
-    <img src="Sem titulo.png" alt="Imagem">
+  <!-- Background funcional -->
+  <div id="hex-grid">
+    <div class="light">
+      <div class="gradient"></div>
+    </div>
+    <div class="grid"></div>
+  </div>
+
+  <!-- Conteúdo do portfólio -->
+  <div class="portfolio-container">
+    <div class="centro">
+      <div class="imagem-linha">
+        <img src="images/perfil.png" alt="foto de perfil" class="perfil">
+        <div class="linha"></div>
+      </div>
+      <div class="titulo">
+        <div>Sou Júlio</div>
+        <div>Bem-vindo ao meu portfolio!</div>
+      </div>
+    </div>
+
+    <section id="projetos">
+      <div class="portfolio-container-inner-title">
+        <h1 class="text-center section-heading">Meus Projetos</h1>
+        <div class="section-heading-line"></div>
+      </div>
+      <div class="portfolio-container-inner">
+        <div class="swiper projetos-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide projetos-slide">
+              <a href="pages/Impulse.html" style="z-index: 10; position: relative;">
+                <div class="projetos-slide-img">
+                  <img src="images/projects/Impulse-Logo.png" alt="projetos">
+                </div>
+                <div class="projetos-slide-content">
+                  <h1 class="semestre">1º Semestre</h1>
+                  <div class="projetos-slide-content-bottom">
+                    <h2 class="equipe" style="color: #2befd3;">Impulse</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide projetos-slide">
+              <a href="pages/Impulse.html" style="z-index: 10; position: relative;">
+                <div class="projetos-slide-img">
+                  <img src="images/projects/Midnight.png" alt="projetos">
+                </div>
+                <div class="projetos-slide-content">
+                  <h1 class="semestre">2º Semestre</h1>
+                  <div class="projetos-slide-content-bottom">
+                    <h2 class="equipe" style="color: #101010;">Midnight</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide projetos-slide">
+              <a href="pages/Impulse.html" style="z-index: 10; position: relative;">
+                <div class="projetos-slide-img">
+                  <img src="images/projects/Ace-logo.png" alt="projetos">
+                </div>
+                <div class="projetos-slide-content">
+                  <h1 class="semestre" style="color: #101010;">3º Semestre</h1>
+                  <div class="projetos-slide-content-bottom">
+                    <h2 class="equipe" style="color: #560079;">Ace</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide projetos-slide">
+              <a href="pages/Impulse.html" style="z-index: 10; position: relative;">
+                <div class="projetos-slide-img">
+                  <img src="images/projects/Vitality-logo.png" alt="projetos">
+                </div>
+                <div class="projetos-slide-content">
+                  <h1 class="semestre">4º Semestre</h1>
+                  <div class="projetos-slide-content-bottom">
+                    <h2 class="equipe" style="color: #3e4af9;">Vitality</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide projetos-slide">
+              <a href="pages/Impulse.html" style="z-index: 10; position: relative;">
+                <div class="projetos-slide-img">
+                  <img src="images/projects/CloudSpark.png" alt="projetos">
+                </div>
+                <div class="projetos-slide-content">
+                  <h1 class="semestre">5º Semestre</h1>
+                  <div class="projetos-slide-content-bottom">
+                    <h2 class="equipe" style="color: #1378EE;">CloudSpark</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide projetos-slide">
+              <a href="pages/Impulse.html" style="z-index: 10; position: relative;">
+                <div class="projetos-slide-img">
+                  <img src="images/projects/DeskData-logo.png" alt="projetos">
+                </div>
+                <div class="projetos-slide-content">
+                  <h1 class="semestre">6º Semestre</h1>
+                  <div class="projetos-slide-content-bottom">
+                    <h2 class="equipe" style="color: #34A9E9;">DeskData</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="projetos-slider-control">
+            <div class="swiper-button-prev slider-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+            <div class="swiper-button-next slider-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-container-inner-title">
+        
+        <div class="section-heading-line"></div>
+        <h1 class="text-center section-heading">Sobre Mim:</h1>
+      </div>
+    </section>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./scripts/index.js"></script>
 </body>
+
 </html>

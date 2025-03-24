@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+#hex-grid {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 1;
+    display: block;
+    overflow: visible;
+}
+
+#hex-grid .grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250%; /* Aumenta o tamanho para cobrir os cantos após a rotação */
+    height: 250%; /* Aumenta o tamanho para cobrir os cantos após a rotação */
+    background: url("../images/backgrounds/grid.svg") repeat;
+    background-size: 500px;
+    background-position: center center; /* Centraliza o padrão SVG */
+    opacity: 1;
+    z-index: 2;
+    display: block;
+    filter: blur(0.5px);
+    transform: translate(-50%, -50%) rotate(40deg); /* Centraliza e rotaciona */
+    transform-origin: center center;
+}
+
+#hex-grid .light {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(15px);
+    display: block;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+#hex-grid .light .gradient {
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(
+            45deg,
+            rgba(42, 233, 201, 0.7) 0%,
+            rgba(51, 91, 244, 0.7) 33%,
+            rgba(255, 87, 127, 0.7) 66%,
+            rgba(42, 233, 201, 0.7) 100%
+        );
+    opacity: 1;
+    border-radius: 50%;
+    display: block;
+    animation: rotateGradient 5s linear infinite;
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        transition: ease-in;
+    }
+    50% {
+        transform: scale(20);
+        opacity: 0.1;
+        transition:ease-in-out;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+        transition: ease-in;
+    }
+}
+
+/* Animação para rotacionar o gradiente */
+@keyframes rotateGradient {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Estilos do portfólio */
+.centro {
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    color: #fff;
+}
+
+.perfil {
+    border-radius: 100%;
+    width: 15vw;
+    height: 15vw;
+    border-color: #001021;
+    border-width: 1vh;
+    border-style: solid;
+}
+
+.imagem-linha {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.linha {
+    position: absolute;
+    width: 100vw;
+    height: 0.5vh; 
+    background-color: #001021;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%); 
+}
+
+.titulo {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+    gap: 1vh;
+}
+
+/* Estilos mínimos para a seção de projetos (sem interferir no carrossel) */
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+
+#tranding {
+    position: relative;
+    z-index: 10;
+    padding: 5vh 0;
+    min-height: 60vh;
+}
+
+.portfolio-container-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.portfolio-container-inner-title {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.section-heading {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.section-heading-line {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 0.6vh;
+    background-color: #001021;
+    filter: blur(2px);
+    border-radius: 20vw;
+}

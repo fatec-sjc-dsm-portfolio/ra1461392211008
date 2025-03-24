@@ -1,0 +1,339 @@
+body {
+    background: #111;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.wrapper span {
+    position: absolute;
+    bottom: -180px;
+    height: 50px;
+    width: 50px;
+    background-color: #18191f;
+    box-shadow: 0 0 50px #2befd3, 0 0 100px #2befd3, 0 0 150px #2befd3, 0 0 200px #0072ff;
+    animation: animate 5s linear infinite;
+    filter: blur(10px);
+}
+
+
+.wrapper span:nth-child(1) {
+    left: 60px;
+    animation-delay: 0.6s;
+}
+
+.wrapper span:nth-child(2) {
+    left: 10%;
+    animation-delay: 3s;
+    width: 60px;
+    height: 60px;
+}
+
+.wrapper span:nth-child(3) {
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.wrapper span:nth-child(4) {
+    left: 30%;
+    animation-delay: 5s;
+    width: 80px;
+    height: 80px;
+}
+
+.wrapper span:nth-child(5) {
+    left: 40%;
+    animation-delay: 1s;
+}
+
+.wrapper span:nth-child(6) {
+    left: 50%;
+    animation-delay: 7s;
+}
+
+.wrapper span:nth-child(7) {
+    left: 60%;
+    animation-delay: 6s;
+    width: 100px;
+    height: 100px;
+}
+
+.wrapper span:nth-child(8) {
+    left: 70%;
+    animation-delay: 8s;
+}
+
+.wrapper span:nth-child(9) {
+    left: 80%;
+    animation-delay: 6s;
+    width: 90px;
+    height: 90px;
+}
+
+.wrapper span:nth-child(10) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.centro {
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+.home-icon {
+    position: absolute;
+    width: 2.5vw;
+    top: 1.5%;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease; 
+    cursor: pointer; 
+}
+
+.home-icon img {
+    width: 100%; 
+    height: auto; 
+}
+
+.home-icon:hover {
+    transform: scale(1.2); 
+}
+
+.home-icon:active {
+    transform: scale(1.1); 
+}
+
+.imagem-linha {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.linha {
+    position: absolute;
+    width: 100vw;
+    height: 0.5vh;
+    background-color: #02213B;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.titulo {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-align: justify;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+    gap: 1vh;
+    color: #fff;
+    -webkit-text-stroke: 0.1px #000000;
+}
+
+.teamLogo {
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+}
+
+.MainContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.sobre {
+    padding-top: 5vh;
+    width: 51vw;
+    height: 30vh;
+}
+
+.sobre-desc {
+    font-size: 1.4vw;
+    text-align: justify;
+    color: white;
+    -webkit-text-stroke: 0.15px #0291ff;
+}
+
+.contribuicoes {
+    padding-top: 5vh;
+    width: 51vw;
+    padding-bottom: 5vh;
+}
+
+.contribuicoes-desc {
+    font-size: 1.4vw;
+    text-align: justify;
+    color: white;
+    -webkit-text-stroke: 0.15px #0291ff;
+}
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    cursor: none;
+    background-color: #000;
+}
+
+.qr-container{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    right: 5%;
+    bottom: -35%;
+}
+
+.qr-code {
+    width: 200px; /* Largura fixa do QR code */
+    height: 200px; /* Altura fixa, mantendo proporção quadrada */
+    background-color: #fff; /* Fundo branco para contraste */
+    border: 2px solid #2befd3; /* Borda com cor do seu tema */
+    border-radius: 2px; /* Cantos arredondados */
+    display: flex; /* Centraliza a imagem do QR code */
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Permite posicionamento absoluto, se necessário */
+    box-shadow: 0 0 15px rgba(43, 239, 211, 0.5); /* Sombra suave */
+    transition: transform 0.3s ease; /* Transição para interatividade */
+}
+
+.qr-code img {
+    width: 100%; /* A imagem do QR code ocupa todo o espaço disponível */
+    height: 100%;
+    object-fit: contain; /* Mantém a proporção sem distorção */
+}
+
+.qr-code:hover {
+    transform: scale(1.05); /* Cresce ligeiramente ao passar o mouse */
+}
+
+.pulse-light {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+    background-color: #2befd3ee;
+    border-radius: 50%;
+    animation: pulse 1s infinite;
+    transform: translate(-50%, -50%);
+    filter: blur(10px);
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+}
+
+
+.carousel {
+    width: 960px;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 10vh;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(350px * 16); /* Ajustado para 16 slides (8 originais + 8 duplicados) */
+    animation: scroll 20s linear infinite;
+}
+
+.carousel:hover .slide-track {
+    animation-play-state: paused;
+}
+
+.slide {
+    width: 350px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Necessário para posicionar o texto */
+}
+
+.slide img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.slide .tech-name {
+    position: absolute;
+    bottom: -30px; /* Aparece abaixo da imagem */
+    color: #fff; /* Cor do texto, ajuste conforme o fundo */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0; /* Escondido por padrão */
+    transition: opacity 0.3s ease; /* Transição suave */
+}
+
+.slide:hover .tech-name {
+    opacity: 1; /* Aparece ao passar o mouse */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-350px * 8)); /* Ajustado para 8 imagens originais */
+    }
+}
