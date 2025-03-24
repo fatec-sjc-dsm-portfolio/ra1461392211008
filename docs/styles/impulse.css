@@ -226,27 +226,27 @@ body {
 }
 
 .qr-code {
-    width: 200px; /* Largura fixa do QR code */
-    height: 200px; /* Altura fixa, mantendo proporção quadrada */
-    background-color: #fff; /* Fundo branco para contraste */
-    border: 2px solid #2befd3; /* Borda com cor do seu tema */
-    border-radius: 2px; /* Cantos arredondados */
-    display: flex; /* Centraliza a imagem do QR code */
+    width: 200px; 
+    height: 200px; 
+    background-color: #fff; 
+    border: 2px solid #2befd3; 
+    border-radius: 2px; 
+    display: flex; 
     justify-content: center;
     align-items: center;
-    position: relative; /* Permite posicionamento absoluto, se necessário */
-    box-shadow: 0 0 15px rgba(43, 239, 211, 0.5); /* Sombra suave */
-    transition: transform 0.3s ease; /* Transição para interatividade */
+    position: relative; 
+    box-shadow: 0 0 15px rgba(43, 239, 211, 0.5); 
+    transition: transform 0.3s ease; 
 }
 
 .qr-code img {
-    width: 100%; /* A imagem do QR code ocupa todo o espaço disponível */
+    width: 100%; 
     height: 100%;
-    object-fit: contain; /* Mantém a proporção sem distorção */
+    object-fit: contain; 
 }
 
 .qr-code:hover {
-    transform: scale(1.05); /* Cresce ligeiramente ao passar o mouse */
+    transform: scale(1.05);
 }
 
 .pulse-light {
@@ -290,7 +290,7 @@ body {
 
 .slide-track {
     display: flex;
-    width: calc(350px * 16); /* Ajustado para 16 slides (8 originais + 8 duplicados) */
+    width: calc(350px * 16); 
     animation: scroll 20s linear infinite;
 }
 
@@ -304,7 +304,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Necessário para posicionar o texto */
+    position: relative; 
 }
 
 .slide img {
@@ -315,18 +315,18 @@ body {
 
 .slide .tech-name {
     position: absolute;
-    bottom: -30px; /* Aparece abaixo da imagem */
-    color: #fff; /* Cor do texto, ajuste conforme o fundo */
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+    bottom: -30px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8); 
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 16px;
-    opacity: 0; /* Escondido por padrão */
-    transition: opacity 0.3s ease; /* Transição suave */
+    opacity: 0; 
+    transition: opacity 0.3s ease;
 }
 
 .slide:hover .tech-name {
-    opacity: 1; /* Aparece ao passar o mouse */
+    opacity: 1; 
 }
 
 @keyframes scroll {
@@ -334,6 +334,6 @@ body {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-350px * 8)); /* Ajustado para 8 imagens originais */
+        transform: translateX(calc(-350px * 8)); 
     }
 }

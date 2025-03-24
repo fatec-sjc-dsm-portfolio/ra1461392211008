@@ -22,16 +22,16 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 250%; /* Aumenta o tamanho para cobrir os cantos após a rotação */
-    height: 250%; /* Aumenta o tamanho para cobrir os cantos após a rotação */
+    width: 250%; 
+    height: 250%; 
     background: url("../images/backgrounds/grid.svg") repeat;
     background-size: 500px;
-    background-position: center center; /* Centraliza o padrão SVG */
+    background-position: center center; 
     opacity: 1;
     z-index: 2;
     display: block;
     filter: blur(0.5px);
-    transform: translate(-50%, -50%) rotate(40deg); /* Centraliza e rotaciona */
+    transform: translate(-50%, -50%) rotate(40deg); 
     transform-origin: center center;
 }
 
@@ -63,7 +63,7 @@ body {
     animation: rotateGradient 5s linear infinite;
 }
 
-/* Animação de pulsação */
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -82,7 +82,7 @@ body {
     }
 }
 
-/* Animação para rotacionar o gradiente */
+
 @keyframes rotateGradient {
     0% {
         transform: rotate(0deg);
@@ -92,7 +92,7 @@ body {
     }
 }
 
-/* Estilos do portfólio */
+
 .centro {
     padding-top: 2vh;
     display: flex;
@@ -140,7 +140,7 @@ body {
     gap: 1vh;
 }
 
-/* Estilos mínimos para a seção de projetos (sem interferir no carrossel) */
+
 .portfolio-container {
     display: flex;
     flex-direction: column;
@@ -194,4 +194,88 @@ body {
     background-color: #001021;
     filter: blur(2px);
     border-radius: 20vw;
+}
+
+
+
+.carousel {
+    width: 100vw;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20vh;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(350px * 16); 
+    animation: scroll 20s linear infinite;
+}
+
+.carousel:hover .slide-track {
+    animation-play-state: paused;
+}
+
+.slide {
+    width: 350px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+.slide img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 1vw;
+}
+
+.slide .tech-name {
+    position: absolute;
+    bottom: -30px; 
+    color: #fff; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.slide:hover .tech-name {
+    opacity: 1;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-350px * 8));
+    }
+}
+
+.github-icon {
+    width: 6vw;
+    transition: transform 0.3s ease;
+    background-color: #033c79dd;
+    border-radius: 100vw;
+}
+
+.github-icon:hover {
+    transform: scale(1.4);
+}
+
+.contato-text{
+    font-size: 24px;
+    text-align: justify;
+}
+
+.about-me{
+    font-size: 24px;
+    text-align: justify;
+    padding-bottom: 3vh;
 }
