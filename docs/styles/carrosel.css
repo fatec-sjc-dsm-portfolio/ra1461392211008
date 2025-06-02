@@ -165,3 +165,35 @@ body {
 .projetos-slider-control .swiper-pagination .swiper-pagination-bullet {
   filter: drop-shadow(10px 8px 24px rgba(18, 28, 53, 0.1));
 }
+
+
+@media (max-width: 768px) {
+  #projetos .projetos-slider {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .projetos-slide {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .projetos-slide-content .projetos-slide-content-bottom {
+    font-size: 4vw;
+    top: 65vh;
+    left: 5vw;
+  }
+
+  .projetos-slider-control {
+    bottom: 2rem;
+  }
+
+  .projetos-slider-control .slider-arrow {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .projetos-slider-control .slider-arrow ion-icon {
+    font-size: 2.5rem;
+  }
+}

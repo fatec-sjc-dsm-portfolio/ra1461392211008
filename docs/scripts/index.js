@@ -49,3 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
     light.style.top = `${initialTop}px`;
   }
 });
+
+$(document).ready(function () {
+  $('.box').click(function () {
+    $(this).toggleClass('animated');
+  });
+});

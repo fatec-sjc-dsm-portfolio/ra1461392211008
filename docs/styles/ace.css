@@ -8,6 +8,65 @@
     --time-4: 200s;
 }
 
+body {
+    margin: 0;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --scale: 2;
+}
+
+.triangle {
+    width: calc(600px * var(--scale));
+    height: calc(520px * var(--scale));
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.circle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    z-index: 0;
+    transition: all 0.05s linear;
+    filter: blur(1px);
+    box-shadow: 0 0 10px 5px #ff69b4;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    font-size: 2vw;
+}
+
 .page-bg, .animation-wrapper {
     position: fixed;
     top: 0;
@@ -171,12 +230,6 @@
     }
 }
 
-body {
-    height: 100vh;
-    margin: 0;
-    overflow-x: hidden;
-}
-
 .centro {
     padding-top: 2vh;
     display: flex;
@@ -226,7 +279,7 @@ body {
     position: absolute;
     width: 100vw;
     height: 0.5vh;
-    background-color: #02213B;
+    background-color: #8502ff;
     top: 50%;
     left: 50%;
     z-index: -1;
@@ -270,7 +323,7 @@ body {
     font-size: 1.4vw;
     text-align: justify;
     color: white;
-    -webkit-text-stroke: 0.15px #0291ff;
+    -webkit-text-stroke: 0.15px #8502ff;
 }
 
 .contribuicoes {
@@ -283,7 +336,7 @@ body {
     font-size: 1.4vw;
     text-align: justify;
     color: white;
-    -webkit-text-stroke: 0.15px #0291ff;
+    -webkit-text-stroke: 0.15px #8502ff;
 }
 
 .qr-container {
@@ -393,6 +446,10 @@ body {
         font-size: 6vw;
         text-align: center;
     }
+    .content {
+        font-size: 4vw;
+        padding: 30px;
+    }
     .teamLogo {
         width: 50vw;
         margin-bottom: 2vh;
@@ -437,6 +494,17 @@ body {
         width: 25vw;
         min-width: 80px;
     }
+    .triangle {
+        width: 80vw;
+        height: calc(80vw * 0.866); /* Mantém proporção do triângulo (520/600 ≈ 0.866) */
+        max-width: 90vw;
+        max-height: 90vh;
+    }
+    .circle {
+        width: 8px;
+        height: 8px;
+        box-shadow: 0 0 8px 4px #ff69b4;
+    }
     .particle-1, .particle-1:after,
     .particle-2, .particle-2:after,
     .particle-3:after,
@@ -448,6 +516,10 @@ body {
 @media (max-width: 1024px) {
     .titulo {
         font-size: 4.5vw;
+    }
+    .content {
+        font-size: 3vw;
+        padding: 20px;
     }
     .sobre, .contribuicoes {
         width: 90vw;
@@ -466,11 +538,24 @@ body {
         width: 120px;
         height: 120px;
     }
+    .triangle {
+        width: 70vw;
+        height: calc(70vw * 0.866);
+    }
+    .circle {
+        width: 6px;
+        height: 6px;
+        box-shadow: 0 0 6px 3px #ff69b4;
+    }
 }
 
 @media (max-width: 600px) {
     .titulo {
         font-size: 5.5vw;
+    }
+    .content {
+        font-size: 3.5vw;
+        padding: 15px;
     }
     .qr-code {
         width: 35vw;
@@ -494,5 +579,14 @@ body {
     }
     .home-icon {
         width: 8vw;
+    }
+    .triangle {
+        width: 60vw;
+        height: calc(60vw * 0.866);
+    }
+    .circle {
+        width: 5px;
+        height: 5px;
+        box-shadow: 0 0 5px 2px #ff69b4;
     }
 }

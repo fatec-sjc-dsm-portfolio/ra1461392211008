@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles/carrosel.css">
   <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/flip-card.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,16 +22,114 @@
     <div class="grid"></div>
   </div>
 
-
   <div class="portfolio-container">
     <div class="centro">
       <div class="imagem-linha">
         <img src="images/perfil.png" alt="foto de perfil" class="perfil">
         <div class="linha"></div>
       </div>
-      <div class="titulo">
-        <div>Sou Júlio</div>
-        <div>Bem-vindo ao meu portfolio!</div>
+    </div>
+
+    <div class="portfolio-container-inner-title">
+      <h1 class="text-center section-heading">Olá sou Júlio</h1>
+      <div class="section-heading-line"></div>
+      
+      <h2 class="text-center section-heading about-me">
+        Sou universitário na Faculdade de Tecnologia Professor Jessen Vidal, cursando Desenvolvimento de Sistemas Multiplataforma. Nascido e criado em São José dos Campos, sempre fui apaixonado por criatividade e, desde criança, gostava de tudo que me permitia criar livremente.
+        <br/><br/>
+        Tenho experiência com diversas tecnologias, especialmente no front-end, como React, e afinidade com linguagens voltadas para o back-end, como Python e JavaScript. Continuo estudando e me aprimorando, sempre em busca de novos métodos e tecnologias para alcançar meus objetivos.
+        <br/><br/>
+        Hoje, como desenvolvedor, me orgulho de criar designs simples, interativos e atraentes para todos os públicos.
+      </h2>
+
+      <div class="portfolio-container-inner-title">
+       
+        <div class="contact-bar">
+          <a href="mailto:juliopm142@gmail.com" target="_blank" class="contact-icon" aria-label="Enviar e-mail">
+            <img src="./images/icons/email-Icon.png" alt="Ícone de E-mail">
+          </a>
+          <a href="https://www.linkedin.com/in/j%C3%BAliopmachado/" target="_blank" class="contact-icon" aria-label="Perfil do Instagram">
+            <img src="./images/icons/linkedin-Icon.png" alt="Ícone Instagram">
+          </a>
+          <a href="https://github.com/JulioPm142" target="_blank" class="contact-icon" aria-label="Perfil do GitHub">
+            <img src="./images/icons/github-Icon.png" alt="Ícone GitHub">
+          </a>
+
+        </div>
+      </div>
+      <h2 class="text-center section-heading">Formações:</h2>
+      <div class="section-heading-line"></div>
+      <!-- Contêiner para os três cartões -->
+      <div class="cards-container">
+        <!-- Cartão 1: Etec -->
+        <div class="wrapper">
+          <div class="box" data-card="1">
+            <div class="front">
+              <div class="img-area">
+                <img src="images/formacoes/etec.png" alt="Logo Etec">
+              </div>
+              <h2>Técnico em Desenvolvimento</h2>
+              <h5>2019-2021</h5>
+            </div>
+            <div class="back">
+              <div class="container">
+                <div class="text-area" style="color: rgb(191, 190, 188);">
+                  <div><h2>Etec Profª</h2>
+                  <h2>Ilza Nascimento Pintus</h2></div>
+                  <h3>Técnico em Desenvolvimento de Sistemas</h3>
+                  <p style="text-align: justify;">Concluí o curso técnico em Desenvolvimento de Sistemas, onde aprendi fundamentos de programação,
+                    incluindo HTML, CSS, JavaScript e banco de dados.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Cartão 2: Fatec -->
+        <div class="wrapper">
+          <div class="box" data-card="2">
+            <div class="front">
+              <div class="img-area">
+                <img src="images/formacoes/fatec.png" alt="Logo Fatec">
+              </div>
+              <h2>Desenvolvimento Multiplataforma</h2>
+              <h5>2023-2025</h5>
+            </div>
+            <div class="back">
+              <div class="container">
+                <div class="text-area" style="color: rgb(191, 190, 188);">
+                  <div><h2>Fatec Profº</h2>
+                  <h2>Jessen Vidal</h2></div>
+                  <h3>Desenvolvimento de Sistemas Multiplataformas</h3>
+                  <p style="text-align: justify;">Atualmente no último semestre, desenvolvi habilidades avançadas em tecnologias como React, Node.js,
+                    TypeScript e MySQL, com foco em projetos multiplataforma.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Cartão 3: Uptime -->
+        <div class="wrapper">
+          <div class="box" data-card="3">
+            <div class="front">
+              <div class="img-area">
+                <img src="images/formacoes/uptime.png" alt="Logo Uptime">
+              </div>
+              <h2>Inglês <br />Avançado</h2>
+              <h5>2020-2022</h5>
+            </div>
+            <div class="back">
+              <div class="container">
+                <div class="text-area" style="color: rgb(191, 190, 188);">
+                  <div><h2>Uptime</h2>
+                  <h2>Comunicação em Inglês</h2></div>
+                  <h3>Curso de Inglês Avançado</h3>
+                  <p style="text-align: justify;">Completei o curso de inglês avançado, alcançando proficiência em comunicação escrita e oral,
+                    essencial para colaboração em projetos internacionais.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -55,7 +156,7 @@
             </div>
             <div class="swiper-slide projetos-slide">
               <a href="pages/midnight.html" style="z-index: 10; position: relative;">
-                <div class="projetos-slide-img">
+                <div class="projetos-slide-img"> <!-- Corrigido de class Civile para class -->
                   <img src="images/projects/Midnight.png" alt="projetos">
                 </div>
                 <div class="projetos-slide-content">
@@ -67,7 +168,7 @@
               </a>
             </div>
             <div class="swiper-slide projetos-slide">
-              <a href="pages/teste.html" style="z-index: 10; position: relative;">
+              <a href="pages/ace.html" style="z-index: 10; position: relative;">
                 <div class="projetos-slide-img">
                   <img src="images/projects/Ace-logo.png" alt="projetos">
                 </div>
@@ -80,7 +181,7 @@
               </a>
             </div>
             <div class="swiper-slide projetos-slide">
-              <a href="pages/Impulse.html" style="z-index: 10; position: relative;">
+              <a href="pages/vitality.html" style="z-index: 10; position: relative;">
                 <div class="projetos-slide-img">
                   <img src="images/projects/Vitality-logo.png" alt="projetos">
                 </div>
@@ -126,24 +227,18 @@
             <div class="swiper-button-next slider-arrow">
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </div>
-  
           </div>
         </div>
       </div>
+
+      
       <div class="portfolio-container-inner-title">
+        <h2 class="text-center section-heading">Experiências:</h2>
         <div class="section-heading-line"></div>
-        <h1 class="text-center section-heading">Sobre Mim:</h1>
-        <h2 class="text-center section-heading about-me">
-          Sou universitário na Faculdade de Tecnologia (Fatec) Jessen Vidal, onde estou
-          cursando o último semestre de Desenvolvimento de Sistemas Multiplataformas.
-          Tenho formação técnica em Desenvolvimento de Sistemas pela Etec Ilza Nascimento Pintus
-          e possuo nível de inglês avançado, concluído na escola Uptime.
-        </h2>
-        <h2 class="text-center section-heading">Conhecimentos:</h2>
       </div>
 
 
-      <div class="carousel">
+      <div class="carousel" style="margin-top:2% ;">
         <div class="slide-track">
           <div class="slide">
             <img src="./images/tecnologias/html.png" alt="Html Icon">
@@ -166,15 +261,15 @@
             <span class="tech-name">MySQL</span>
           </div>
           <div class="slide">
-            <img src="./images/tecnologias/react.png" alt="Vscode Icon">
+            <img src="./images/tecnologias/react.png" alt="React Icon">
             <span class="tech-name">React</span>
           </div>
           <div class="slide">
-            <img src="./images/tecnologias/node-js.png" alt="Vscode Icon">
+            <img src="./images/tecnologias/node-js.png" alt="Node Icon">
             <span class="tech-name">Node</span>
           </div>
           <div class="slide">
-            <img src="./images/tecnologias/typescript.png" alt="Vscode Icon">
+            <img src="./images/tecnologias/typescript.png" alt="TypeScript Icon">
             <span class="tech-name">Node</span>
           </div>
           <div class="slide">
@@ -198,38 +293,34 @@
             <span class="tech-name">MySQL</span>
           </div>
           <div class="slide">
-            <img src="./images/tecnologias/react.png" alt="Vscode Icon">
+            <img src="./images/tecnologias/react.png" alt="React Icon">
             <span class="tech-name">React</span>
           </div>
           <div class="slide">
-            <img src="./images/tecnologias/node-js.png" alt="Vscode Icon">
+            <img src="./images/tecnologias/node-js.png" alt="Node js Icon">
             <span class="tech-name">Node</span>
           </div>
           <div class="slide">
-            <img src="./images/tecnologias/typescript.png" alt="Vscode Icon">
-            <span class="tech-name">Node</span>
+            <img src="./images/tecnologias/typescript.png" alt="TypeScript Icon">
+            <span class="tech-name">TypeScript</span>
           </div>
         </div>
       </div>
-
-      <div class="portfolio-container-inner-title">
-        <div class="section-heading-line"></div>
-        <h2 class="text-center section-heading">Contato:</h2>
-        <a href="https://github.com/JulioPm142" target="_blank" class="text-center section-heading">
-          <img src="./images/tecnologias/github.png" alt="GitHub" class="github-icon">
-        </a>
-        <h2 class="text-center section-heading contato-text">https://github.com/JulioPm142</h2>
-        <h2 class="text-center section-heading contato-text">juliopm142@gmail.com</h2>
-      </div>
-
     </section>
   </div>
 
-  
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="./scripts/carrosel.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.box').click(function () {
+        $(this).toggleClass('animated');
+      });
+    });
+  </script>
 </body>
 
 </html>
