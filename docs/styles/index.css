@@ -278,7 +278,7 @@ body {
 .about-me {
   font-size: 24px;
   text-align: justify;
-  padding-bottom: 3vh;
+  padding-bottom: 1vh;
 }
 
 .cards-container {
@@ -558,13 +558,9 @@ body {
   gap: 15%;
   padding: 10px 20px;
   border-radius: 10px;
-
   width: 100%;
   max-width: 400px;
-
-  margin-top: 1rem;
-  margin-bottom: 10%;
-
+  margin-top: 0.5rem;
 }
 
 .contact-icon {

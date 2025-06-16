@@ -1,0 +1,431 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  
+  #hex-grid {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 1;
+    display: block;
+    overflow: visible;
+  }
+  
+  #hex-grid .grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250%;
+    height: 250%;
+    background: url("../images/backgrounds/deadkdata-bg.png") repeat;
+    background-size: 1300px;
+    background-position: center center;
+    opacity: 1;
+    z-index: 2;
+    display: block;
+    transform: translate(-50%, -50%) rotate(40deg);
+    transform-origin: center center;
+    z-index: 10;
+  }
+
+  
+  .ring {
+    position: absolute;
+    width: 10vw;
+    height: 10vh;
+    left: 30%;
+    top: 13.5%;
+    transform: translate(-50%, -50%);
+    border: 300px solid rgb(0, 158, 250); /* grossura e cor da circunferência */
+    animation: close-ring 6.5s infinite linear; /* Duração e tipo de repetição */
+    opacity: 1;
+    border-radius: 310px;
+    pointer-events: none;
+    z-index: -3;
+  }
+  
+  
+  @keyframes close-ring {
+    0% {
+      transform: scale(16); 
+
+    }
+
+    70% {
+      transform: scale(9.5);
+      border: 300px solid rgb(10, 95, 144,1);
+      z-index: -3;
+
+    }
+    100% {
+        transform: scale(9.5);
+        border: 300px solid rgb(10, 95, 144,0);
+        z-index: -3;
+      }
+  }
+
+
+  
+.centro {
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    position: relative;
+    z-index: 1;
+}
+
+.home-icon {
+    position: absolute;
+    width: 2.5vw;
+    top: 1.5%;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease; 
+    cursor: pointer;
+    z-index: 2;
+}
+
+.home-icon img {
+    width: 100%; 
+    height: auto; 
+}
+
+.home-icon:hover {
+    transform: scale(1.2); 
+}
+
+.home-icon:active {
+    transform: scale(1.1); 
+}
+
+.imagem-linha {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.linha {
+    position: absolute;
+    width: 100vw;
+    height: 0.5vh;
+    background-color: #02213B;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.titulo {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-align: justify;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5vw;
+    gap: 1vh;
+    color: #fff;
+    color: rgb(26, 172, 229);
+    font-weight: 1000;
+    -webkit-text-stroke: 0.5px #08273e;
+}
+
+.teamLogo {
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+}
+
+.MainContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.sobre {
+    padding-top: 5vh;
+    width: 51vw;
+    height: 30vh;
+}
+
+.sobre-desc {
+    font-size: 1.4vw;
+    text-align: justify;
+    color: white;
+    -webkit-text-stroke: 0.15px rgb(26, 172, 229);
+}
+
+.contribuicoes {
+    padding-top: 5vh;
+    width: 51vw;
+    padding-bottom: 5vh;
+}
+
+.contribuicoes-desc {
+    font-size: 1.4vw;
+    text-align: justify;
+    color: white;
+    -webkit-text-stroke: 0.15px #0291ff;
+}
+
+.qr-container {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    right: 5%;
+    bottom: 5%;
+    z-index: 2;
+}
+
+.qr-code {
+    width: 15vw;
+    max-width: 200px;
+    min-width: 100px;
+    aspect-ratio: 1 / 1;
+    border-radius: 2px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.3s ease; 
+}
+
+.qr-code img {
+    width: 90%; 
+    height: 90%;
+    object-fit: contain; 
+}
+
+.qr-code:hover {
+    transform: scale(1.05);
+}
+
+.carousel {
+    width: 960px;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 10vh;
+    z-index: 1;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(350px * 16); 
+    animation: scroll 20s linear infinite;
+}
+
+.carousel:hover .slide-track {
+    animation-play-state: paused;
+}
+
+.slide {
+    width: 350px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+.slide img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.slide .tech-name {
+    position: absolute;
+    bottom: -30px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.slide:hover .tech-name {
+    opacity: 1; 
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-350px * 8)); 
+    }
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1200px) {
+    .MainContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .titulo {
+        font-size: 6vw;
+        text-align: center;
+    }
+    .teamLogo {
+        width: 50vw;
+        margin-bottom: 2vh;
+    }
+    .sobre, .contribuicoes {
+        width: 90vw;
+        height: auto;
+        padding-bottom: 2vh;
+    }
+    .sobre-desc, .contribuicoes-desc {
+        font-size: 4vw;
+        text-align: justify;
+    }
+    .carousel {
+        width: 100%;
+        height: 120px;
+    }
+    .slide {
+        width: 200px;
+        height: 100px;
+    }
+    .slide img {
+        width: 100px;
+        height: 100px;
+    }
+    .slide .tech-name {
+        font-size: 14px;
+        bottom: -25px;
+    }
+    .home-icon {
+        width: 6vw;
+        top: 2%;
+        left: 3%;
+    }
+    .qr-container {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        padding: 2vh 0;
+    }
+    .qr-code {
+        width: 25vw;
+        min-width: 80px;
+    }
+    .particle-1, .particle-1:after,
+    .particle-2, .particle-2:after,
+    .particle-3:after,
+    .particle-4, .particle-4:after {
+        box-shadow: none; /* Desativa partículas em telas menores para melhorar performance */
+    }
+}
+
+@media (max-width: 1024px) {
+    .titulo {
+        font-size: 4.5vw;
+    }
+    .sobre, .contribuicoes {
+        width: 90vw;
+    }
+    .sobre-desc, .contribuicoes-desc {
+        font-size: 3vw;
+    }
+    .carousel {
+        width: 100vw;
+    }
+    .slide {
+        width: 250px;
+        height: 120px;
+    }
+    .slide img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .titulo {
+        font-size: 5.5vw;
+    }
+    .qr-code {
+        width: 35vw;
+        min-width: 80px;
+    }
+    .carousel {
+        width: 100%;
+        height: 100px;
+    }
+    .slide {
+        width: 150px;
+        height: 80px;
+    }
+    .slide img {
+        width: 80px;
+        height: 80px;
+    }
+    .slide .tech-name {
+        font-size: 12px;
+        bottom: -20px;
+    }
+    .home-icon {
+        width: 8vw;
+    }
+}
+  
+@media (max-width: 768px) {
+    #hex-grid .grid {
+      width: 300vw;
+      height: 300vh;
+      background-size: 200vw;
+      transform: translate(-50%, -50%) rotate(40deg);
+    }
+  
+    .ring {
+      width: 60vw;
+      height: 130vw;
+      border: 60vw solid rgba(0, 158, 250, 1);
+      border-radius: 10%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: close-ring-mobile 6.5s infinite linear;
+    }
+  
+    @keyframes close-ring-mobile {
+      0% {
+        transform: translate(-50%, -50%) scale(2);
+        border-color: rgba(0, 158, 250, 1);
+      }
+  
+      70% {
+        transform: translate(-50%, -50%) scale(1.4);
+        border-color: rgba(10, 95, 144, 1);
+      }
+  
+      100% {
+        transform: translate(-50%, -50%) scale(1.4);
+        border-color: rgba(10, 95, 144, 0);
+      }
+    }
+  }
